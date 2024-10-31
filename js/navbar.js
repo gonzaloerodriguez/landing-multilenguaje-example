@@ -2,6 +2,29 @@ document.addEventListener("DOMContentLoaded", function () {
   const mobileMenuButton = document.getElementById("mobile-menu-button");
   const mobileMenu = document.getElementById("mobile-menu");
   const languageButtons = document.querySelectorAll("[data-lang]");
+  const navItems = document.querySelectorAll(".nav-item");
+  const sections = document.querySelectorAll("section");
+
+  function setActiveNavItem() {
+    let currentSection = "home";
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (window.pageYOffset >= sectionTop - 60) {
+        currentSection = section.id;
+      }
+    });
+
+    navItems.forEach((item) => {
+      item.classList.remove("active");
+      if (item.getAttribute("href").slice(1) === currentSection) {
+        item.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", setActiveNavItem);
+  setActiveNavItem();
 
   // Toggle mobile menu
   mobileMenuButton.addEventListener("click", function () {
@@ -146,13 +169,10 @@ document.addEventListener("DOMContentLoaded", function () {
     updateProcessSliderLanguage();
   }
 
-  // Add click event listeners to language buttons
   languageButtons.forEach((btn) => {
     btn.addEventListener("click", () => switchLanguage(btn.dataset.lang));
   });
   window.showAlert = function (type, title, message) {
-    // You can implement this function using your preferred alert library
-    // For example, if you're using SweetAlert2:
     Swal.fire({
       icon: type,
       title: title,

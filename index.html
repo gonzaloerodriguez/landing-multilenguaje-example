@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html class="scroll-smooth" lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,36 +28,36 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.14.4/dist/sweetalert2.min.css
             <div class="flex items-center">
               <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
                 <a
-                  href="#"
-                  class="border-orange-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                  href="#home"
+                  class="nav-item border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium relative"
                   data-translate="inicio"
                 >
                   Inicio
                 </a>
                 <a
                   href="#services"
-                  class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                  class="nav-item border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium relative"
                   data-translate="servicios"
                 >
                   Servicios
                 </a>
                 <a
                   href="#process-slider"
-                  class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                  class="nav-item border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium relative"
                   data-translate="proceso"
                 >
                   Proceso
                 </a>
                 <a
-                  href="#"
-                  class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                  href="#about"
+                  class="nav-item border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium relative"
                   data-translate="nosotros"
                 >
                   Nosotros
                 </a>
                 <a
-                  href="#"
-                  class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                  href="#contact"
+                  class="nav-item border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium relative"
                   data-translate="contacto"
                 >
                   Contacto
@@ -114,7 +114,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.14.4/dist/sweetalert2.min.css
         <div class="sm:hidden hidden" id="mobile-menu">
           <div class="pt-2 pb-3 space-y-1">
             <a
-              href="#"
+              href="#home"
               class="bg-orange-50 border-orange-500 text-orange-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
               data-translate="inicio"
             >
@@ -135,14 +135,14 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.14.4/dist/sweetalert2.min.css
               Proceso
             </a>
             <a
-              href="#"
+              href="#about"
               class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
               data-translate="nosotros"
             >
               Nosotros
             </a>
             <a
-              href="#"
+              href="#contact"
               class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
               data-translate="contacto"
             >
@@ -172,8 +172,9 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.14.4/dist/sweetalert2.min.css
         </div>
       </nav>
     </header>
-    <main>
+    <main class="">
       <div
+        id="home"
         class="relative w-full h-[58.563rem] flex flex-col items-center justify-center text-white overflow-hidden"
       >
         <div
@@ -201,28 +202,28 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.14.4/dist/sweetalert2.min.css
           >
             Optimización integral de proyectos eléctricos
           </p>
-          <button
+          <a
             data-translate="buttonBanner"
-            href="/contacto"
+            href="#contact"
             class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300 cursor-pointer"
           >
             Contactanos
-          </button>
+          </a>
         </div>
-        <button href="/process" class="absolute bottom-36 animate-bounce">
+        <a href="#services" class="absolute bottom-36 animate-bounce">
           <image
             src="/public/img/arrow-down.svg"
             alt="botón flecha hacia abajo"
             class="mx-auto"
           />
-        </button>
+        </a>
       </div>
       <section
         id="services"
-        class="bg-white text-black py-28"
+        class="bg-white text-black py-28 w-full mx-auto px-[60px]"
         data-language="es"
       >
-        <div class="container mx-auto">
+        <div class="mx-auto">
           <h2
             class="text-[#EA580C] text-lg lg:text-3xl font-bold mb-4"
             data-content="title"
@@ -454,8 +455,11 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.14.4/dist/sweetalert2.min.css
           ></div>
         </div>
       </div>
-      <section id="about-us" class="bg-white w-full text-black pt-16 lg:pt-28">
-        <div class="container mx-auto">
+      <section
+        id="about"
+        class="bg-white w-full text-black pt-16 lg:pt-28 px-[60px]"
+      >
+        <div class="mx-auto">
           <h2
             class="text-[#EA580C] text-lg lg:text-3xl font-bold mb-2"
             data-translate="aboutTitle"
