@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.14.4/dist/sweetalert2.all.min.js
+"></script>
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.14.4/dist/sweetalert2.min.css
+"
+      rel="stylesheet"
+    />
+    <link href="./css/global.css" rel="stylesheet" />
+
+    <title>Landing de muestra</title>
+  </head>
+  <body class="font">
+    <header>
+      <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50 mb-7">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between h-16">
+            <div class="">
+              <img class="w-16 h-16" src="./public/img/logo.svg" alt="" />
+            </div>
+            <div class="flex items-center">
+              <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                <a
+                  href="#"
+                  class="border-orange-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                  data-translate="inicio"
+                >
+                  Inicio
+                </a>
+                <a
+                  href="#services"
+                  class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                  data-translate="servicios"
+                >
+                  Servicios
+                </a>
+                <a
+                  href="#process-slider"
+                  class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                  data-translate="proceso"
+                >
+                  Proceso
+                </a>
+                <a
+                  href="#"
+                  class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                  data-translate="nosotros"
+                >
+                  Nosotros
+                </a>
+                <a
+                  href="#"
+                  class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                  data-translate="contacto"
+                >
+                  Contacto
+                </a>
+              </div>
+            </div>
+            <div class="hidden sm:ml-6 sm:flex sm:items-center">
+              <div
+                class="flex items-center space-x-2 bg-gray-200 rounded-full p-1 border-2 rounded-full border-orange-500"
+              >
+                <button
+                  class="px-3 py-1 rounded-full bg-white text-gray-700 focus:outline-none"
+                  data-lang="es"
+                >
+                  es
+                </button>
+                <button
+                  class="px-3 py-1 rounded-full text-gray-700 focus:outline-none"
+                  data-lang="en"
+                >
+                  en
+                </button>
+              </div>
+            </div>
+            <div class="-mr-2 flex items-center sm:hidden">
+              <button
+                type="button"
+                class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+                id="mobile-menu-button"
+              >
+                <span class="sr-only">Open main menu</span>
+                <svg
+                  class="block h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="sm:hidden hidden" id="mobile-menu">
+          <div class="pt-2 pb-3 space-y-1">
+            <a
+              href="#"
+              class="bg-orange-50 border-orange-500 text-orange-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+              data-translate="inicio"
+            >
+              Inicio
+            </a>
+            <a
+              href="#services"
+              class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+              data-translate="servicios"
+            >
+              Servicios
+            </a>
+            <a
+              href="#process-slider"
+              class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+              data-translate="proceso"
+            >
+              Proceso
+            </a>
+            <a
+              href="#"
+              class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+              data-translate="nosotros"
+            >
+              Nosotros
+            </a>
+            <a
+              href="#"
+              class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+              data-translate="contacto"
+            >
+              Contacto
+            </a>
+          </div>
+          <div class="pt-4 pb-3 border-t border-gray-200">
+            <div class="flex items-center px-4">
+              <div
+                class="flex items-center space-x-2 bg-gray-200 rounded-full p-1"
+              >
+                <button
+                  class="px-3 py-1 rounded-full bg-white text-gray-700 focus:outline-none"
+                  data-lang="es"
+                >
+                  es
+                </button>
+                <button
+                  class="px-3 py-1 rounded-full text-gray-700 focus:outline-none"
+                  data-lang="en"
+                >
+                  en
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div
+        class="relative w-full h-[58.563rem] flex flex-col items-center justify-center text-white overflow-hidden"
+      >
+        <div
+          class="absolute inset-0 bg-[url('/public/img/banner.svg')] bg-cover bg-center h-[58.563rem]"
+        ></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-gray-100 to-transparent h-full"
+        ></div>
+
+        <div class="z-10 absolute bottom-96 text-center space-y-10">
+          <image
+            src="./public/img/logo.svg"
+            alt="logo"
+            class="mx-auto w-52 h-52"
+          />
+          <h1
+            data-translate="titleBanner"
+            class="text-4xl md:text-5xl font-bold"
+          >
+            Ingeniería Eléctrica y Modelado 3D
+          </h1>
+          <p
+            data-translate="subtitleBanner"
+            class="text-xl md:text-2xl text-white font-semibold"
+          >
+            Optimización integral de proyectos eléctricos
+          </p>
+          <button
+            data-translate="buttonBanner"
+            href="/contacto"
+            class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300 cursor-pointer"
+          >
+            Contactanos
+          </button>
+        </div>
+        <button href="/process" class="absolute bottom-36 animate-bounce">
+          <image
+            src="./public/img/arrow-down.svg"
+            alt="botón flecha hacia abajo"
+            class="mx-auto"
+          />
+        </button>
+      </div>
+      <section
+        id="services"
+        class="bg-white text-black py-28"
+        data-language="es"
+      >
+        <div class="container mx-auto">
+          <h2
+            class="text-[#EA580C] text-lg lg:text-3xl font-bold mb-4"
+            data-content="title"
+            data-translate="titleService"
+          >
+            Servicios
+          </h2>
+
+          <div class="mb-4 lg:px-12">
+            <p
+              class="text-2xl font-normal text-justify"
+              data-content="paragraph1"
+              data-translate="paragraphOneServices"
+            >
+              Nos dedicamos a brindar Servicios de Diseño de Proyectos
+              Eléctricos, abarcando los aspectos relacionados con la
+              planificación y ejecución de instalaciones eléctricas, incluyendo
+              la especificación de tableros generales, correctores de factor de
+              potencia, sistemas de transferencia automática, sistemas de
+              almacenamiento de energía y distribución de energía a equipos.
+            </p>
+            <div class="hidden content-full">
+              <p
+                class="text-2xl leading-10 font-normal text-justify mt-4"
+                data-content="paragraph2"
+                data-translate="paragraphTwoServices"
+              >
+                Además, realizamos el diseño de canalizaciones, dimensionamiento
+                de cables y la integración de sistemas de protección y puesta a
+                tierra. En cuanto a la iluminación, se diseñan sistemas para
+                áreas interiores, exteriores y de emergencia, garantizando
+                eficiencia y seguridad.
+              </p>
+              <p
+                class="text-2xl leading-10 font-normal text-justify mt-4"
+                data-content="paragraph3"
+                data-translate="paragraphThreeServices"
+              >
+                Uno de los pilares fundamentales en nuestro diseño es el
+                desarrollo en Modelos 3D utilizando metodologías BIM, que abarca
+                no solo el diseño de las salas de tableros eléctricos, sino
+                también las canalizaciones y acometidas que conectan todos los
+                sectores de la infraestructura y sus equipos. Esto permite una
+                mayor precisión en la planificación y coordinación entre
+                disciplinas, reduciendo errores en la fase de construcción y
+                optimizando el uso del espacio. El uso de BIM facilita la
+                gestión del ciclo de vida de la instalación, mejorando la
+                visualización del proyecto y permitiendo realizar ajustes de
+                manera más eficiente durante todo el proceso.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex justify-center items-center lg:mt-20 lg:px-20 lg:gap-8"
+          >
+            <div class="flex items-center">
+              <div class="rounded-full">
+                <img
+                  src="./public/img/worldElectric.svg"
+                  alt="World Electric"
+                  class="w-[70px] h-[70px]"
+                />
+              </div>
+              <img
+                src="./public/img/arrows.svg"
+                alt="Arrow"
+                class="w-[70px] h-[70px]"
+              />
+
+              <div class="rounded-full">
+                <img
+                  src="./public/img/hexagonIcon.svg"
+                  alt="Hexagon"
+                  class="w-[70px] h-[70px]"
+                />
+              </div>
+              <img
+                src="./public/img/arrows.svg"
+                alt="Arrow"
+                class="w-[70px] h-[70px]"
+              />
+
+              <div class="rounded-full">
+                <img
+                  src="./public/img/connectIcon.svg"
+                  alt="Connect"
+                  class="w-[70px] h-[70px]"
+                />
+              </div>
+              <img
+                src="./public/img/arrows.svg"
+                alt="Arrow"
+                class="w-[70px] h-[70px]"
+              />
+
+              <div class="rounded-full">
+                <img
+                  src="./public/img/database.svg"
+                  alt="Database"
+                  class="w-[70px] h-[70px]"
+                />
+              </div>
+              <img
+                src="./public/img/arrows.svg"
+                alt="Arrow"
+                class="w-[70px] h-[70px]"
+              />
+
+              <div class="rounded-full">
+                <img
+                  src="./public/img/engineeringMultiDis.svg"
+                  alt="Engineering"
+                  class="w-[70px] h-[70px]"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full flex justify-center mt-8">
+            <button
+              onclick="toggleContent()"
+              class="text-[#504F4E] border flex items-center justify-center border-[#EA580C] rounded w-32 h-11 font-semibold mt-2"
+            >
+              <img
+                src="./public/img/readMore.svg"
+                alt=""
+                class="read-more-icon w-[25px] h-[25px]"
+              />
+              <img
+                src="./public/img/readLess.svg"
+                alt=""
+                class="read-less-icon hidden w-[25px] h-[25px]"
+              />
+              <span
+                class="button-text"
+                data-translate="buttonMore"
+                data-more-key="buttonMore"
+                data-less-key="buttonLess"
+                >Leer más</span
+              >
+            </button>
+          </div>
+        </div>
+      </section>
+      <div id="process-slider" class="w-full mx-auto pt-16 pl-4 py-8">
+        <div class="mb-4">
+          <h2
+            class="text-lg lg:text-3xl font-bold text-[#EA580C] px-[0.5rem] md:px-[2.2rem]"
+            data-translate="processTitle"
+          >
+            Nuestro proceso
+          </h2>
+        </div>
+
+        <div class="relative">
+          <div class="flex justify-between items-center mb-12">
+            <h3
+              class="text-xl sm:text-2xl md:text-4xl font-medium text-[#0E0E0E] px-2 md:px-[2.2rem]"
+              data-translate="processSubtitle"
+            >
+              De la idea a la puesta en marcha.
+            </h3>
+            <div class="flex space-x-2 pr-8 md:pr-32">
+              <button onclick="prevStep()" class="p-2 rounded-full">
+                <img
+                  src="public/img/chevronLeft.svg"
+                  width="22"
+                  height="22"
+                  alt="Previous"
+                />
+              </button>
+              <button onclick="nextStep()" class="p-2 rounded-full">
+                <img
+                  src="public/img/chevronRight.svg"
+                  width="22"
+                  height="22"
+                  alt="Next"
+                />
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="grid grid-cols-[2fr_.4fr] min-h-[255px] lg:max-h-[403px] gap-4 overflow-hidden"
+          >
+            <div
+              class="flex justify-between bg-[radial-gradient(circle_at_top_right,_#D9D9D9,_#0E0E0E_70%,_#0E0E0E_50%)] p-2 md:p-[2.3rem]"
+            >
+              <div class="flex flex-col items-start justify-center">
+                <h4
+                  class="text-lg md:text-2xl lg:text-3xl font-normal mb-2 text-white"
+                  id="activeTitle"
+                ></h4>
+                <p
+                  class="text-white opacity-50 text-base leading-4 md:text-lg lg:text-xl font-medium"
+                  id="activeParagraph"
+                ></p>
+              </div>
+              <img
+                id="activeIcon"
+                class="w-[66px] lg:w-[366px] lg:h-[366px]"
+                width="366"
+                height="366"
+                alt=""
+              />
+            </div>
+            <div
+              class="bg-[radial-gradient(circle_at_bottom_left,_#D9D9D9,_#0E0E0E_150%,_#504F4E_50%)] shadow p-4 overflow-hidden"
+            >
+              <div
+                class="w-[791px] h-full flex flex-col items-start justify-center"
+              >
+                <h4
+                  class="text-lg md:text-2xl lg:text-3xl font-normal mb-2 text-white"
+                  id="nextTitle"
+                ></h4>
+                <p
+                  class="text-white text-base md:text-lg lg:text-xl opacity-50 font-medium"
+                  id="nextParagraph"
+                ></p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex justify-center mt-6 space-x-2"
+            id="dots-container"
+          ></div>
+        </div>
+      </div>
+      <section id="about-us" class="bg-white w-full text-black pt-16 lg:pt-28">
+        <div class="container mx-auto">
+          <h2
+            class="text-[#EA580C] text-lg lg:text-3xl font-bold mb-2"
+            data-translate="aboutTitle"
+          >
+            Nosotros
+          </h2>
+          <h3
+            class="text-xl lg:text-4xl font-medium text-[#0E0E0E] mb-12"
+            data-translate="aboutSubtitle"
+          >
+            Un gran equipo para grandes desafíos
+          </h3>
+          <div
+            class="flex flex-col w-full items-center md:items-start md:flex-row md:justify-around space-y-8 md:space-y-0 md:space-x-4"
+          >
+            <!-- Team Member 1 -->
+            <div
+              class="max-w-sm flex flex-col items-center bg-white rounded-lg overflow-hidden shadow-lg"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a"
+                alt="Professional headshot"
+                class="w-72 h-52 rounded-t-lg"
+              />
+              <div class="p-4 space-y-2">
+                <h3
+                  class="text-lg lg:text-xl font-normal mt-2 leading-6"
+                  data-translate="member1Name"
+                >
+                  David Mitchell
+                </h3>
+                <h4
+                  class="text-sm text-[#a6a6a6] lg:text-lg font-normal mb-2 leading-3"
+                  data-translate="member1Role"
+                >
+                  Director Ejecutivo & Fundador
+                </h4>
+                <p
+                  class="text-black text-base font-normal leading-4"
+                  data-translate="member1Description"
+                >
+                  Ingeniero Eléctrico y Emprendedor. Siempre en busca de nuevos
+                  desafíos
+                </p>
+              </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div
+              class="max-w-sm flex flex-col items-center bg-white rounded-lg overflow-hidden shadow-lg"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1556157382-97eda2d62296"
+                alt="Professional headshot"
+                class="w-72 h-52 rounded-t-lg"
+              />
+              <div class="p-4 space-y-2">
+                <h3
+                  class="text-lg lg:text-xl font-normal mt-2 leading-6"
+                  data-translate="member2Name"
+                >
+                  Mark Johnson
+                </h3>
+                <h4
+                  class="text-sm text-[#a6a6a6] lg:text-lg font-normal mb-2 leading-3"
+                  data-translate="member2Role"
+                >
+                  CTO - Fundador
+                </h4>
+                <p
+                  class="text-black text-base font-normal leading-4"
+                  data-translate="member2Description"
+                >
+                  Técnico en Sistemas Electrónicos. Enfocada en la innovación y
+                  motivada por los desafíos
+                </p>
+              </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div
+              class="max-w-sm flex flex-col items-center bg-white rounded-lg overflow-hidden shadow-lg"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1559548331-f9cb98001426"
+                alt="Professional headshot"
+                class="w-72 h-52 rounded-t-lg"
+              />
+              <div class="p-4 space-y-2">
+                <h3
+                  class="text-lg lg:text-xl font-normal mt-2 leading-6"
+                  data-translate="member3Name"
+                >
+                  Michael Chen
+                </h3>
+                <h4
+                  class="text-sm text-[#a6a6a6] lg:text-lg font-normal mb-2 leading-3"
+                  data-translate="member3Role"
+                >
+                  Director BIM
+                </h4>
+                <p
+                  class="text-black text-base font-normal leading-4"
+                  data-translate="member3Description"
+                >
+                  Técnico en Producción de Bienes y Servicios. Persiguiendo los
+                  trazos que definen el mañana
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="p-4 md:py-8 md:pl-8 lg:py-12 lg:pl-12">
+        <h2
+          class="text-orange-500 pt-14 text-lg lg:text-3xl font-bold mb-4"
+          data-translate="contactTitle"
+        >
+          Contacto
+        </h2>
+
+        <div
+          class="bg-[#535353] rounded-lg shadow-lg p-6 lg:pr-0 md:py-8 md:pl-8 lg:py-10 lg:pl-10 relative z-10"
+        >
+          <div
+            class="flex flex-col lg:flex-row lg:justify-between lg:items-center"
+          >
+            <div class="w-full mb-8 lg:mb-0">
+              <h3
+                class="text-white text-2xl md:text-3xl lg:text-[42px] font-normal mb-4"
+                data-translate="contactHeading"
+              >
+                Conecta con Nosotros para Impulsar tu Proyecto
+              </h3>
+              <p
+                class="text-[#C6C6C6] text-base font-normal mb-6"
+                data-translate="contactSubheading"
+              >
+                Contáctanos y optimiza tu proyecto con nuestras soluciones
+                integrales y enfoque BIM.
+              </p>
+
+              <form id="contactForm" class="contact-form">
+                <div class="flex flex-col md:flex-row md:space-x-4">
+                  <div class="flex-1">
+                    <label
+                      for="nombre"
+                      class="block text-white mb-1"
+                      data-translate="nameLabel"
+                      >Nombre</label
+                    >
+                    <input
+                      type="text"
+                      id="nombre"
+                      name="nombre"
+                      class="w-full p-2 rounded bg-[#535353] border-2 border-[#E0E0E0] text-white"
+                      data-translate-placeholder="namePlaceholder"
+                    />
+                    <div
+                      class="text-red-500 text-sm mt-1 hidden"
+                      data-error="nombre"
+                    ></div>
+                  </div>
+
+                  <div class="flex-1 mt-5 md:mt-0">
+                    <label
+                      for="apellido"
+                      class="block text-white mb-1"
+                      data-translate="surnameLabel"
+                      >Apellido</label
+                    >
+                    <input
+                      type="text"
+                      id="apellido"
+                      name="apellido"
+                      class="w-full p-2 rounded bg-[#535353] border-2 border-[#E0E0E0] text-white"
+                      data-translate-placeholder="surnamePlaceholder"
+                    />
+                    <div
+                      class="text-red-500 text-sm mt-1 hidden"
+                      data-error="apellido"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="mt-5">
+                  <label
+                    for="email"
+                    class="block text-white mb-1"
+                    data-translate="emailLabel"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="w-full p-2 rounded bg-[#535353] border-2 border-[#E0E0E0] text-white"
+                    data-translate-placeholder="emailPlaceholder"
+                  />
+                  <div
+                    class="text-red-500 text-sm mt-1 hidden"
+                    data-error="email"
+                  ></div>
+                </div>
+
+                <div class="mt-5">
+                  <label
+                    for="asunto"
+                    class="block text-white mb-1"
+                    data-translate="subjectLabel"
+                    >Asunto</label
+                  >
+                  <input
+                    type="text"
+                    id="asunto"
+                    name="asunto"
+                    class="w-full p-2 rounded bg-[#535353] border-2 border-[#E0E0E0] text-white"
+                    data-translate-placeholder="subjectPlaceholder"
+                  />
+                  <div
+                    class="text-red-500 text-sm mt-1 hidden"
+                    data-error="asunto"
+                  ></div>
+                </div>
+
+                <div class="mt-5">
+                  <label
+                    for="mensaje"
+                    class="block text-white mb-1"
+                    data-translate="messageLabel"
+                    >Tu mensaje</label
+                  >
+                  <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    rows="4"
+                    class="w-full p-2 rounded bg-[#535353] border-2 border-[#E0E0E0] text-white"
+                    data-translate-placeholder="messagePlaceholder"
+                  ></textarea>
+                  <div
+                    class="text-red-500 text-sm mt-1 hidden"
+                    data-error="mensaje"
+                  ></div>
+                  <span class="text-[#E0E0E0] text-sm"
+                    ><span id="charCount">0</span>/500</span
+                  >
+                </div>
+
+                <button
+                  type="submit"
+                  class="w-full mt-6 flex justify-center items-center bg-orange-500 text-white py-2 px-4 rounded h-10 md:h-[4.25rem] hover:bg-orange-600 transition-colors duration-300 font-semibold text-base md:text-2xl"
+                  data-translate="submitButton"
+                >
+                  <span class="submit-text">Enviar</span>
+                  <img
+                    src="/public/img/tailSpin.svg"
+                    alt="Loading"
+                    class="hidden w-8 h-8"
+                    id="loadingSpinner"
+                  />
+                </button>
+              </form>
+            </div>
+
+            <div class="flex justify-center items-center w-full">
+              <img
+                src="/public/img/logo.svg"
+                alt="Company Logo"
+                class="w-[13.188rem] md:w-[22.25rem]"
+              />
+            </div>
+          </div>
+        </div>
+
+        <img
+          src="/public/img/finFormulario.png"
+          alt=""
+          class="-mt-7 -z-10 w-full"
+        />
+      </section>
+    </main>
+    <footer class="bg-white w-full pt-16 pb-6 px-4 md:px-12">
+      <div class="container mx-auto">
+        <div
+          class="flex md:flex-row justify-between items-center md:items-start space-y-6 md:space-y-0"
+        >
+          <div class="flex flex-col space-y-4 w-full">
+            <div class="flex flex-row justify-between space-x-14">
+              <img
+                src="/public/img/logo.svg"
+                alt="IExA Logo"
+                class="w-32 h-auto"
+              />
+              <div class="flex items-center space-x-4">
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-gray-600 hover:text-gray-800 transition-colors"
+                  aria-label="Visit our LinkedIn page"
+                >
+                  <svg
+                    class="w-10 h-10"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://wa.me/yourphonenumber"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-gray-600 hover:text-gray-800 transition-colors"
+                  aria-label="Contact us on WhatsApp"
+                >
+                  <svg
+                    class="w-10 h-10"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="text-xs md:text-base text-gray-500 text-center">
+              <p>
+                &copy; <span id="currentYear">2024</span>
+                <span data-translate="footerRights"
+                  >Todos los derechos reservados</span
+                >
+              </p>
+              <p class="mt-2">
+                <span data-translate="footerDeveloped">Desarrollado por</span>
+                <a
+                  href="#"
+                  rel="noopener noreferrer"
+                  class="text-orange-500 hover:underline text-xs md:text-base ml-1"
+                >
+                  Foo Talent Group
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Update copyright year automatically
+      document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+    </script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/services.js"></script>
+    <script src="./js/processSlider.js"></script>
+    <script src="./js/contactForm.js"></script>
+  </body>
+</html>
