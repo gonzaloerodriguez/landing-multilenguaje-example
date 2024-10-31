@@ -123,7 +123,7 @@ const steps = [
       es: "Recopilación de información, necesidades del consumo eléctrico y evaluación de normativas.",
       en: "Gathering information, electrical consumption needs, and evaluation of regulations.",
     },
-    icon: "/public/img/hexagonIcon.svg",
+    icon: "/img/hexagonIcon.svg",
   },
   {
     id: 2,
@@ -139,7 +139,7 @@ const steps = [
       es: "Análisis de la factibilidad técnica y económica. Identificación de las mejores soluciones tecnológicas.",
       en: "Analysis of technical and economic feasibility. Identification of the best technological solutions.",
     },
-    icon: "/public/img/estudio.svg",
+    icon: "/img/estudio.svg",
   },
   {
     id: 3,
@@ -155,7 +155,7 @@ const steps = [
       es: "Creación de esquemas preliminares y selección de equipos.",
       en: "Creation of preliminary schematics and equipment selection.",
     },
-    icon: "/public/img/pipeline.svg",
+    icon: "/img/pipeline.svg",
   },
   {
     id: 4,
@@ -171,7 +171,7 @@ const steps = [
       es: "Estudio de características de red. Dimensionamiento de equipos y protección.",
       en: "Study of network characteristics. Equipment sizing and protection.",
     },
-    icon: "/public/img/calculosElectricos.svg",
+    icon: "/img/calculosElectricos.svg",
   },
   {
     id: 5,
@@ -187,7 +187,7 @@ const steps = [
       es: "Elaboración de planos eléctricos detallados, diagramas unifilares, trifilares, comando, topográficos de tableros. Dimensionamiento de transformadores, generadores y UPS. Coordinación de protecciones. Definición de sistemas de medición de energía.",
       en: "Development of detailed electrical plans, single-line and three-line diagrams, command, and switchboard layouts. Sizing of transformers, generators, and UPS. Protection coordination. Definition of energy measurement systems.",
     },
-    icon: "/public/img/electricBoard.svg",
+    icon: "/img/electricBoard.svg",
   },
   {
     id: 6,
@@ -203,7 +203,7 @@ const steps = [
       es: "Modelado y coordinación con otras disciplinas.",
       en: "Modeling and coordination with other disciplines.",
     },
-    icon: "/public/img/connectIcon.svg",
+    icon: "/img/connectIcon.svg",
   },
   {
     id: 7,
@@ -219,7 +219,7 @@ const steps = [
       es: "Creación de listas de materiales y presupuesto de las etapas del proyecto.",
       en: "Creation of material lists and budgeting for project stages.",
     },
-    icon: "/public/img/especificaciones.svg",
+    icon: "/img/especificaciones.svg",
   },
   {
     id: 8,
@@ -235,7 +235,7 @@ const steps = [
       es: "Obtención de permisos y aprobaciones.",
       en: "Obtaining permits and approvals.",
     },
-    icon: "/public/img/database.svg",
+    icon: "/img/database.svg",
   },
   {
     id: 9,
@@ -251,7 +251,7 @@ const steps = [
       es: "Monitoreo y control de la ejecución de la instalación eléctrica. Puesta en servicio y verificación de funcionamiento.",
       en: "Monitoring and control of the electrical installation execution. Commissioning and functional verification.",
     },
-    icon: "/public/img/supervision.svg",
+    icon: "/img/supervision.svg",
   },
   {
     id: 10,
@@ -267,7 +267,7 @@ const steps = [
       es: "Entrega del proyecto ejecutivo y capacitación",
       en: "Delivery of the executive project and training.",
     },
-    icon: "/public/img/engineeringMultiDis.svg",
+    icon: "/img/engineeringMultiDis.svg",
   },
 ];
 

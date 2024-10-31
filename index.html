@@ -13,7 +13,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.14.4/dist/sweetalert2.min.css
 "
       rel="stylesheet"
     />
-    <link href="/css/global.css" rel="stylesheet" />
+    <link href="/global.css" rel="stylesheet" />
 
     <title>Landing de muestra</title>
   </head>
@@ -385,7 +385,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.14.4/dist/sweetalert2.min.css
             <div class="flex space-x-2 pr-8 md:pr-32">
               <button onclick="prevStep()" class="p-2 rounded-full">
                 <img
-                  src="public/img/chevronLeft.svg"
+                  src="/img/chevronLeft.svg"
                   width="22"
                   height="22"
                   alt="Previous"
@@ -393,7 +393,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.14.4/dist/sweetalert2.min.css
               </button>
               <button onclick="nextStep()" class="p-2 rounded-full">
                 <img
-                  src="public/img/chevronRight.svg"
+                  src="/img/chevronRight.svg"
                   width="22"
                   height="22"
                   alt="Next"
@@ -707,7 +707,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.14.4/dist/sweetalert2.min.css
                 >
                   <span class="submit-text">Enviar</span>
                   <img
-                    src="/public/img/tailSpin.svg"
+                    src="/img/tailSpin.svg"
                     alt="Loading"
                     class="hidden w-8 h-8"
                     id="loadingSpinner"
@@ -718,7 +718,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.14.4/dist/sweetalert2.min.css
 
             <div class="flex justify-center items-center w-full">
               <img
-                src="/public/img/logo.svg"
+                src="/img/logo.svg"
                 alt="Company Logo"
                 class="w-[13.188rem] md:w-[22.25rem]"
               />
@@ -726,11 +726,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.14.4/dist/sweetalert2.min.css
           </div>
         </div>
 
-        <img
-          src="/public/img/finFormulario.png"
-          alt=""
-          class="-mt-7 -z-10 w-full"
-        />
+        <img src="/img/finFormulario.png" alt="" class="-mt-7 -z-10 w-full" />
       </section>
     </main>
     <footer class="bg-white w-full pt-16 pb-6 px-4 md:px-12">
@@ -740,11 +736,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.14.4/dist/sweetalert2.min.css
         >
           <div class="flex flex-col space-y-4 w-full">
             <div class="flex flex-row justify-between space-x-14">
-              <img
-                src="/public/img/logo.svg"
-                alt="IExA Logo"
-                class="w-32 h-auto"
-              />
+              <img src="/img/logo.svg" alt="IExA Logo" class="w-32 h-auto" />
               <div class="flex items-center space-x-4">
                 <a
                   href="https://linkedin.com"
@@ -810,9 +802,9 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.14.4/dist/sweetalert2.min.css
       document.getElementById("currentYear").textContent =
         new Date().getFullYear();
     </script>
-    <script src="navbar.js"></script>
-    <script src="services.js"></script>
-    <script src="processSlider.js"></script>
-    <script src="contactForm.js"></script>
+    <script src="/navbar.js"></script>
+    <script src="/services.js"></script>
+    <script src="/processSlider.js"></script>
+    <script src="/contactForm.js"></script>
   </body>
 </html>
