@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     languageButtons.forEach((btn) => {
-      btn.classList.toggle("bg-white", btn.dataset.lang === lang);
+      btn.classList.toggle("bg-[#d5d5d5]", btn.dataset.lang === lang);
     });
 
     document.documentElement.lang = lang;
