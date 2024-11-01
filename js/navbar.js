@@ -10,12 +10,14 @@ document.addEventListener("DOMContentLoaded", function () {
     sections.forEach((section) => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.clientHeight;
-      if (window.pageYOffset >= sectionTop - 60) {
+      if (window.pageYOffset >= sectionTop - 80) {
         currentSection = section.id;
       }
     });
 
     navItems.forEach((item) => {
+      console.log(currentSection);
+
       item.classList.remove("active");
       if (item.getAttribute("href").slice(1) === currentSection) {
         item.classList.add("active");
